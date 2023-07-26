@@ -1,119 +1,3 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #6c757d;
-}
-
-h1 {
-  color: rgb(255, 164, 148);
-  text-align: center;
-  display: block;
-  margin: 0 0 3px 0;
-  text-shadow: 1px 3px 3px rgb(0, 0, 0);
-}
-
-.form {
-  display: flex;
-  width: 30%;
-  justify-content: center;
-  background-color: #acb7c1;
-  padding: 0rem 0 1rem 0;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.793);
-}
-.form #loginForm {
-  display: inline;
-}
-.form label {
-  display: block; /* para que la etiqueta quede arriba */
-  margin: 13px 0px 1px 0px;
-  font-size: 1.5rem;
-}
-.form input, .form #genero {
-  background-color: rgb(255, 164, 148);
-  height: 20px;
-}
-.form .btn-enviar {
-  display: flex;
-  color: rgb(255, 164, 148);
-  margin: 1rem 0;
-  padding: 1rem;
-  background-color: #747474;
-  justify-content: center;
-  align-content: center;
-  align-items: baseline;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.register {
-  text-align: center;
-}
-
-.contenedor {
-  background-color: antiquewhite;
-  margin: 1rem;
-  padding: 1rem;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #6c757d;
-}
-
-h1 {
-  color: rgb(255, 164, 148);
-  text-align: center;
-  display: block;
-  margin: 0 0 3px 0;
-  text-shadow: 1px 3px 3px rgb(0, 0, 0);
-}
-
-.form {
-  display: flex;
-  width: 30%;
-  justify-content: center;
-  background-color: #acb7c1;
-  padding: 0rem 0 1rem 0;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.793);
-}
-.form #loginForm {
-  display: inline;
-}
-.form label {
-  display: block; /* para que la etiqueta quede arriba */
-  margin: 13px 0px 1px 0px;
-  font-size: 1.5rem;
-}
-.form input, .form #genero {
-  background-color: rgb(255, 164, 148);
-  height: 20px;
-}
-.form .btn-enviar {
-  display: flex;
-  color: rgb(255, 164, 148);
-  margin: 1rem 0;
-  padding: 1rem;
-  background-color: #747474;
-  justify-content: center;
-  align-content: center;
-  align-items: baseline;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.register {
-  text-align: center;
-}
-
-.contenedor {
-  background-color: antiquewhite;
-  margin: 1rem;
-  padding: 1rem;
-}
-
 .volver {
   display: block;
   text-align: center;
@@ -138,4 +22,86 @@ input {
   flex-direction: row;
 }
 
-/*# sourceMappingURL=style.css.map */
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6c757d;
+}
+
+h1 {
+  color: rgb(255, 164, 148);
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  margin: 2px 0 3px 0;
+  text-shadow: 1px 3px 3px rgb(0, 0, 0);
+}
+
+.form {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  background-color: #acb7c1;
+  padding: 0rem 0 1rem 0;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.793);
+}
+
+label {
+  display: block;
+  margin: 13px 0px 1px 0px;
+  font-size: 1.5rem;
+}
+
+input,
+#genero {
+  background-color: rgb(255, 164, 148);
+  width: 95%;
+}
+
+.btn-enviar {
+  display: flex;
+  color: rgb(255, 164, 148);
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #747474;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.register {
+  text-align: center;
+}
+
+.contenedor {
+  background-color: antiquewhite;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 400px) {
+  .form {
+    display: flex;
+    width: 100%;
+  }
+  .contenedor {
+    background-color: antiquewhite;
+    margin: 0rem;
+  }
+  #loginForm {
+    width: 100%;
+  }
+  label {
+    margin: 13px 0px 1px 0px;
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,18 @@
+// Obtener el valor del parámetro 'nombre' de la URL
+const urlParams = new URLSearchParams(window.location.search);
+const nombre = urlParams.get('nombre');
+
+// Mostrar el nombre en el elemento con id="name"
+if (nombre) {
+  const nameElement = document.getElementById("name");
+  document.getElementById("name").textContent = nombre;
+  nameElement.style.color = "#FFFFFF";
+} else {
+  nombreElement=document.getElementById("name").textContent = "Invitado";
+}
+
+
+
 let palabraescondida = [];
 let caracterespalabraaencontrar = [];
 let letraencontrada = 0;

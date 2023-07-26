@@ -32,8 +32,9 @@ function enviarFormulario() {
 
   // Agregar el objeto al arreglo de registros
   registros.push(registro);
-  window.location.href = "bienvenido.html";
-  alert("¡Registro exitoso! Los datos se han almacenado correctamente.");
+  
+  window.location.href = "bienvenido.html?nombre=" + encodeURIComponent(nombre);
+  alert(nombre + "  ¡Registro exitoso! Los datos se han almacenado correctamente." );
 
   // Guardar los datos en localStorage
   localStorage.setItem("registros", JSON.stringify(registros));

@@ -1,8 +1,9 @@
+/* Estilos generales */
 // Definir variables
 $primary-color: rgb(255, 164, 148);
 $secondary-color: #6c757d;
 
-// Estilos CSS usando Sass en index**********
+// Estilos CSS usando Sass en index.scss
 body {
   font-family: Arial, sans-serif;
   background-color: $secondary-color;
@@ -10,48 +11,51 @@ body {
 
 h1 {
   color: $primary-color;
+  font-size: 2rem;
   text-align: center;
   display: block;
-  margin: 0 0 3px 0;
+  margin: 2px 0 3px 0;
   text-shadow: 1px 3px 3px rgb(0, 0, 0);
 }
 
 .form {
   display: flex;
-  width: 30%;
+  width: 50%;
   justify-content: center;
   background-color: #acb7c1;
   padding: 0rem 0 1rem 0;
   margin: auto;
   border-radius: 10px;
   box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.793);
-  #loginForm {
-    display: inline;
-}
-    label {
-      display: block; /* para que la etiqueta quede arriba */
-      margin: 13px 0px 1px 0px;
-      font-size: 1.5rem;
-    }
-    input, #genero
-    {
-      background-color: $primary-color;
-      height: 20px;
-    }
-    .btn-enviar {
-      display: flex;
-      color: rgb(255, 164, 148);
-      margin: 1rem 0;
-      padding: 1rem;
-      background-color: #747474;
-      justify-content: center;
-      align-content: center;
-      align-items: baseline;
-      flex-wrap: wrap;
-      flex-direction: row;
-    }
+ }
+  
+label {
+  display: block;
+  margin: 13px 0px 1px 0px;
+  font-size: 1.5rem;
 }
 
+input,
+#genero {
+  background-color: $primary-color;
+  width: 95%;
+}
+
+.btn-enviar {
+  display: flex;
+  color: rgb(255, 164, 148);
+  width: fit-content;
+  height: fit-content;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #747474;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 
 .register {
   text-align: center;
@@ -61,4 +65,25 @@ h1 {
   background-color: antiquewhite;
   margin: 1rem;
   padding: 1rem;
+}
+
+  // Media query para pantallas menores a 400px
+  @media (max-width: 400px) {
+
+    .form {
+      display: flex;
+      width: 100%;
+     }
+     .contenedor {
+      background-color: antiquewhite;
+      margin: 0rem;
+ }
+      #loginForm {
+      width: 100%;
+    }
+    label {
+      margin: 13px 0px 1px 0px;
+      font-size: 2rem;   
+   }
+    
 }
