@@ -4,9 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido!!</title>
-</head>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+  </head>
 <body>
-    <h1>Bienvenido!!</h1>
-    Estas logueado
+    <div class="contenedor">
+        <header>
+            <h1>Bienvenido!!</h1>
+            Estas logueado
+          <div class="informacion">
+            <div class="infoimage">
+              <img id="image" src="img/ahorcado7.gif" />
+            </div>
+            <div class="info1">
+              <p class="muestrainfo" id="parrafos"></p>
+              <p id="usadas">Usadas<br />0</p>
+              <p id="letrasacertadas">Acertadas<br />0</p>
+              <p id="letraserradas">Erradas<br />0</p>
+            </div>
+  
+            <h2 id="titulo2">Jugador 1 ingresa una palabra a descubrir</h2>
+          </div>
+        </header>
+        <input
+          type="password"
+          id="palabraaencontrar"
+          name="name"
+          placeholder="ingrese una sola palabra"
+          autocomplete="off"
+        />
+        <button type="button" id="button1">Enviar</button>
+        <div class="ingresarpalabra">
+          <p id="info"></p>
+          <a id="muestrapalabra">Aca la palabra a encontrar</a>
+          <div class="contletraaingresar">
+            <input
+              type="text"
+              maxlength="1"
+              id="letraaencontrar"
+              name="name"
+              placeholder="ingrese una letra"
+              autocomplete="off"
+            />
+            <button type="button" id="button">Enviar</button>
+            <script src="js/autofocus.js"></script>
+          </div>
+        </div>
+  
+        <div id="muestraresultado">
+          <p id="ganaste"></p>
+          <p id="perdiste"></p>
+          <button
+            type="text"
+            id="reload"
+            onclick="javascript:window.location.reload();"
+          >
+            Volver a Jugar
+          </button>
+        </div>
+      </div>
+  
+      <script src="js/codigo.js"></script>
+  <a href="index.html">inicio</a>
+      <a href="../1">1</a>
+      <a href="../2">2</a>
+      <a href="../3">3</a>
 </body>
 </html>

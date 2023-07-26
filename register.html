@@ -2,10 +2,12 @@
 <html>
   <head>
     <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <script src="/js/script.js" defer></script>
   <body>
-    <h2>Formulario de Registro</h2>
+    <h1>Formulario de Registro</h1>
+    <section class="form">
     <form id="formularioRegistro">
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" required /><br />
@@ -44,6 +46,7 @@
         onclick="enviarFormulario(event)"
       />
     </form>
-    <a href="index.html">volver</a>
+    </section>
+    <a class="volver" href="index.html">volver</a>
   </body>
 </html>

@@ -1,0 +1,25 @@
+@import "_index.scss";
+
+.volver{
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+input {
+    width: 100%;
+}
+
+#btnRegistrarse {
+    display: flex;
+    color: rgb(255, 164, 148);
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #747474;
+    justify-content: center;
+    align-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

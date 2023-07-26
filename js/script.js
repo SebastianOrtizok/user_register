@@ -30,6 +30,7 @@ function enviarFormulario() {
 
   // Agregar el objeto al arreglo de registros
   registros.push(registro);
+  alert("¡Registro exitoso! Los datos se han almacenado correctamente.");
 
   // Guardar los datos en localStorage
   localStorage.setItem('registros', JSON.stringify(registros));
@@ -37,7 +38,6 @@ function enviarFormulario() {
   // Limpiar el formulario después del registro exitoso
   document.getElementById("registroForm").reset();
 
-  alert("¡Registro exitoso! Los datos se han almacenado correctamente.");
   return false;
 }
 

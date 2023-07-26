@@ -1,0 +1,14 @@
+{
+  "name": "proyecto-login",
+  "version": "1.0.0",
+  "description": "Proyecto Login en localstorage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sebastian Ortiz",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
