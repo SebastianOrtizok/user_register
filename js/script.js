@@ -1,5 +1,5 @@
 // Recuperar los datos almacenados en localStorage o inicializar como un array vacío si no hay datos almacenados
-const registros = JSON.parse(localStorage.getItem('registros')) || [];
+const registros = JSON.parse(localStorage.getItem("registros")) || [];
 
 // Función para manejar el envío del formulario desde el botón "Registrarse"
 function enviarFormulario() {
@@ -8,7 +8,9 @@ function enviarFormulario() {
   const apellido = document.getElementById("apellido").value;
   const email = document.getElementById("email").value;
   const contrasena = document.getElementById("contrasena").value;
-  const confirmarContrasena = document.getElementById("confirmar_contrasena").value;
+  const confirmarContrasena = document.getElementById(
+    "confirmar_contrasena"
+  ).value;
   const edad = document.getElementById("edad").value;
   const genero = document.getElementById("genero").value;
 
@@ -30,13 +32,15 @@ function enviarFormulario() {
 
   // Agregar el objeto al arreglo de registros
   registros.push(registro);
+  window.location.href = "bienvenido.html";
   alert("¡Registro exitoso! Los datos se han almacenado correctamente.");
 
   // Guardar los datos en localStorage
-  localStorage.setItem('registros', JSON.stringify(registros));
+  localStorage.setItem("registros", JSON.stringify(registros));
 
   // Limpiar el formulario después del registro exitoso
-  document.getElementById("registroForm").reset();
+
+  // document.getElementById("registroForm").reset();
 
   return false;
 }
@@ -57,7 +61,9 @@ function iniciarSesion() {
     // Redireccionar al usuario a la página de bienvenida (bienvenido.html)
     window.location.href = "bienvenido.html";
   } else {
-    alert("Email o contraseña incorrectos. Por favor, intenta nuevamente o regístrate si no tienes una cuenta.");
+    alert(
+      "Email o contraseña incorrectos. Por favor, intenta nuevamente o regístrate si no tienes una cuenta."
+    );
     // Aquí puedes redireccionar al usuario a la página de registro o realizar otras acciones necesarias
   }
 
