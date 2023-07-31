@@ -1,17 +1,10 @@
-// Obtener el valor del parámetro 'nombre' de la URL
-const urlParams = new URLSearchParams(window.location.search);
-const nombre = urlParams.get('nombre');
+let letra = "";
 
-// Mostrar el nombre en el elemento con id="name"
-if (nombre) {
-  const nameElement = document.getElementById("name");
-  document.getElementById("name").textContent = nombre;
-  nameElement.style.color = "#FFFFFF";
-} else {
-  nombreElement=document.getElementById("name").textContent = "Invitado";
+function showLetterValue() {
+  console.log(letra); // Muestra el valor de 'letterValue'
 }
 
-
+//************************************
 
 let palabraescondida = [];
 let caracterespalabraaencontrar = [];
@@ -42,7 +35,6 @@ let palabraAleatoria = [
 //Elije la palabra random a descubrir
 palabraaencontrar =
   palabraAleatoria[Math.floor(Math.random() * palabraAleatoria.length)];
-
 //Esconde la palabra con guiones
 for (i = 0; i < palabraaencontrar.length; i++) {
   caracterespalabraaencontrar.push(palabraaencontrar.substring(i, i + 1));
@@ -53,33 +45,30 @@ htmlcode =
   palabraaencontrar.length +
   " letras:<br> </div>" +
   "<div class='escondida'>" +
-  palabraescondida.join("") + //Le saco las comar
+  palabraescondida.join("") + //Le saco las comas
   " </div>";
 
 //borrar esta linea  console.log(palabraescondida);
 document.getElementById("muestrapalabra").innerHTML = htmlcode;
-document.getElementById("titulo2").style.display = "none";
-document.getElementById("palabraaencontrar").style.display = "none";
-document.getElementById("button1").style.display = "none";
 document.getElementById("reload").style.display = "none";
 document.getElementById("muestraresultado").style.display = "none";
 
 //******************* */
-document.getElementById("button");
-button.addEventListener("click", () => {
+function printLetter(letra) {
+  document.getElementById(letra).style.display = "none";
+
   if (palabraaencontrar.length != letraencontrada) {
     //Si da igual entonces la palabra ya se encontró
     var letraok = false;
-    let letra = document.getElementById("letraaencontrar").value;
-    letra = letra.toLowerCase();
     letrausada = false;
 
-    // Chequea si la letra fue usada en letrasusadas o letras incorrectas
-    if (letrasusadas.includes(letra) | letrasusadasincorrecta.includes(letra)) {
-      document.getElementById("info").innerHTML =
-        "No Wiilly la letra  " + letra + " ya la usaste, elegí otra <br>";
-      letrausada = true;
-    }
+    // Chequea si la letra fue usada en letrasusadas o letras incorrectas 
+    //ya no es necesario porque quito la letra que está mal en el teclado
+    // if (letrasusadas.includes(letra) | letrasusadasincorrecta.includes(letra)) {
+    //   document.getElementById("info").innerHTML =
+    //     "No Wiilly la letra  " + letra + " ya la usaste, elegí otra <br>";
+    //   letrausada = true;
+    // }
 
     //  Aca si la letra no fue usada y esta en los caracteres de la palabra entonces
     // guarda la letra en variables letrasusadas / reemplazo el caracter de la palabra escondida por la letra encontrada
@@ -99,7 +88,7 @@ button.addEventListener("click", () => {
           "Bien ahí Roger, encontraste la letra <b>" + letra + "</b>";
         letraok = true;
         htmlcode =
-          "<div> La palabra tiene " +
+          "<div> Palabra de " +
           palabraaencontrar.length +
           " letras:<br> " +
           palabraescondida.join("") +
@@ -112,6 +101,7 @@ button.addEventListener("click", () => {
           "<br>";
       }
     }
+
     //**************** */
 
     if (letraok == false && letrausada == false) {
@@ -130,8 +120,6 @@ button.addEventListener("click", () => {
         "<br>";
       if (vida == 0) {
         // document.getElementById("image").src = "fotoahorcado" + vida + ".jpg";
-        document.getElementById("button").style.display = "none";
-        document.getElementById("letraaencontrar").style.display = "none";
         document.getElementById("perdiste").innerHTML +=
           "Perdiste... seguí entrenando, la palabra era <span style='color: white;'>" +
           "|" +
@@ -156,7 +144,6 @@ button.addEventListener("click", () => {
       ("</span> ¡Eres el Roger Federer de los ahorcados!");
       document.getElementById("ganaste").innerHTML += htmlcode;
       document.getElementById("muestraresultado").style.display = "";
-      return letra;
     }
   }
-});
+}
